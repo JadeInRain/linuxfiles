@@ -1,0 +1,6 @@
+在编译 bar.c 时使用 -m32 选项，以指定生成 i386 目标文件：gcc -m32 -c bar.c -o bar.o。然后，再次执行链接命令：ld -m elf_i386 -s -o foobar foo.o bar.o
+
+; $ nasm -f elf foo.asm -o foo.o
+; $ gcc -c bar.c -o bar.o
+; $ ld -s hello.o bar.o -o foobar
+; $ ./foobar

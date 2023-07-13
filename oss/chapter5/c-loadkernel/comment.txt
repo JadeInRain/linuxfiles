@@ -1,0 +1,5 @@
+nasm -f elf -o kernel.o kernel.asm
+ld -m elf_i386 -s -o kernel.bin kernel.o
+sudo mount -o loop a.img /mnt/floppy/
+sudo cp kernel.bin /mnt/floppy/ -v
+sudo umount /mnt/floppy/
